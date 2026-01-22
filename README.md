@@ -24,7 +24,6 @@ Application web pour créer et gérer des playlists avec recherche par tags.
 **Recherche et filtres**
 - Recherche par titre, artiste, album
 - Filtres par genre (Pop, Rock, Hip-Hop, Jazz, Électro...)
-- Filtres par mood (Énergique, Relaxant, Triste, Joyeux...)
 - Filtre par année de sortie
 - Combinaison de plusieurs filtres simultanément
 
@@ -42,7 +41,7 @@ Application web pour créer et gérer des playlists avec recherche par tags.
 
 **Collection `songs`**
 - `_id`, `title`, `artist`, `album`, `year`, `duration`
-- `genre[]`, `mood[]`, `coverUrl`, `language`
+- `genre[]`, `coverUrl`, `language`
 - **Modèle**: basé sur la structure de l'API Spotify (champs adaptés au projet)
 
 ## Installation

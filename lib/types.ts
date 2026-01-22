@@ -11,7 +11,6 @@ export interface Song {
   year: number;
   duration: number; // en secondes
   genre: string[];
-  mood: string[];
   coverUrl: string;
   language: string;
 }
@@ -43,7 +42,6 @@ export interface Playlist {
 export interface SearchParams {
   query?: string; // recherche dans titre/artiste
   genres?: string[];
-  moods?: string[];
   yearMin?: number;
   yearMax?: number;
 }

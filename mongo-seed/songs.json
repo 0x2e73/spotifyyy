@@ -5,8 +5,10 @@
     "album": "After Hours",
     "year": 2020,
     "duration": 200,
-    "genre": ["Pop", "Synthwave"],
-    "mood": ["Énergique", "Joyeux"],
+    "genre": [
+      "Pop",
+      "Synthwave"
+    ],
     "coverUrl": "https://picsum.photos/seed/blinding/300",
     "language": "Anglais"
   },
@@ -16,8 +18,10 @@
     "album": "Future Nostalgia",
     "year": 2020,
     "duration": 203,
-    "genre": ["Pop", "Disco"],
-    "mood": ["Joyeux", "Dansant"],
+    "genre": [
+      "Pop",
+      "Disco"
+    ],
     "coverUrl": "https://picsum.photos/seed/levitating/300",
     "language": "Anglais"
   },
@@ -27,8 +31,10 @@
     "album": "A Night at the Opera",
     "year": 1975,
     "duration": 354,
-    "genre": ["Rock", "Progressive Rock"],
-    "mood": ["Dramatique", "Épique"],
+    "genre": [
+      "Rock",
+      "Progressive Rock"
+    ],
     "coverUrl": "https://picsum.photos/seed/bohemian/300",
     "language": "Anglais"
   },
@@ -38,8 +44,10 @@
     "album": "8 Mile Soundtrack",
     "year": 2002,
     "duration": 326,
-    "genre": ["Hip-Hop", "Rap"],
-    "mood": ["Motivant", "Intense"],
+    "genre": [
+      "Hip-Hop",
+      "Rap"
+    ],
     "coverUrl": "https://picsum.photos/seed/lose/300",
     "language": "Anglais"
   },
@@ -49,8 +57,10 @@
     "album": "÷ (Divide)",
     "year": 2017,
     "duration": 233,
-    "genre": ["Pop", "Dancehall"],
-    "mood": ["Joyeux", "Romantique"],
+    "genre": [
+      "Pop",
+      "Dancehall"
+    ],
     "coverUrl": "https://picsum.photos/seed/shape/300",
     "language": "Anglais"
   },
@@ -60,8 +70,10 @@
     "album": "(What's the Story) Morning Glory?",
     "year": 1995,
     "duration": 258,
-    "genre": ["Rock", "Britpop"],
-    "mood": ["Mélancolique", "Nostalgique"],
+    "genre": [
+      "Rock",
+      "Britpop"
+    ],
     "coverUrl": "https://picsum.photos/seed/wonder/300",
     "language": "Anglais"
   },
@@ -71,8 +83,10 @@
     "album": "Thriller",
     "year": 1983,
     "duration": 294,
-    "genre": ["Pop", "R&B"],
-    "mood": ["Dansant", "Mystérieux"],
+    "genre": [
+      "Pop",
+      "R&B"
+    ],
     "coverUrl": "https://picsum.photos/seed/billie/300",
     "language": "Anglais"
   },
@@ -82,8 +96,10 @@
     "album": "Hotel California",
     "year": 1977,
     "duration": 391,
-    "genre": ["Rock", "Classic Rock"],
-    "mood": ["Mélancolique", "Contemplatif"],
+    "genre": [
+      "Rock",
+      "Classic Rock"
+    ],
     "coverUrl": "https://picsum.photos/seed/hotel/300",
     "language": "Anglais"
   },
@@ -93,8 +109,10 @@
     "album": "Nevermind",
     "year": 1991,
     "duration": 301,
-    "genre": ["Grunge", "Alternative Rock"],
-    "mood": ["Rebelle", "Énergique"],
+    "genre": [
+      "Grunge",
+      "Alternative Rock"
+    ],
     "coverUrl": "https://picsum.photos/seed/teen/300",
     "language": "Anglais"
   },
@@ -104,8 +122,10 @@
     "album": "21",
     "year": 2011,
     "duration": 228,
-    "genre": ["Pop", "Soul"],
-    "mood": ["Puissant", "Émotionnel"],
+    "genre": [
+      "Pop",
+      "Soul"
+    ],
     "coverUrl": "https://picsum.photos/seed/rolling/300",
     "language": "Anglais"
   },
@@ -115,8 +135,10 @@
     "album": "Led Zeppelin IV",
     "year": 1971,
     "duration": 482,
-    "genre": ["Rock", "Hard Rock"],
-    "mood": ["Épique", "Contemplatif"],
+    "genre": [
+      "Rock",
+      "Hard Rock"
+    ],
     "coverUrl": "https://picsum.photos/seed/stairway/300",
     "language": "Anglais"
   },
@@ -126,8 +148,10 @@
     "album": "Appetite for Destruction",
     "year": 1987,
     "duration": 356,
-    "genre": ["Rock", "Hard Rock"],
-    "mood": ["Énergique", "Romantique"],
+    "genre": [
+      "Rock",
+      "Hard Rock"
+    ],
     "coverUrl": "https://picsum.photos/seed/sweet/300",
     "language": "Anglais"
   },
@@ -137,8 +161,10 @@
     "album": "Imagine",
     "year": 1971,
     "duration": 183,
-    "genre": ["Pop", "Rock"],
-    "mood": ["Paisible", "Contemplatif"],
+    "genre": [
+      "Pop",
+      "Rock"
+    ],
     "coverUrl": "https://picsum.photos/seed/imagine/300",
     "language": "Anglais"
   },
@@ -148,8 +174,10 @@
     "album": "...And Justice for All",
     "year": 1988,
     "duration": 446,
-    "genre": ["Metal", "Thrash Metal"],
-    "mood": ["Sombre", "Intense"],
+    "genre": [
+      "Metal",
+      "Thrash Metal"
+    ],
     "coverUrl": "https://picsum.photos/seed/one/300",
     "language": "Anglais"
   },
@@ -159,8 +187,10 @@
     "album": "Hey Jude",
     "year": 1968,
     "duration": 431,
-    "genre": ["Rock", "Pop Rock"],
-    "mood": ["Réconfortant", "Nostalgique"],
+    "genre": [
+      "Rock",
+      "Pop Rock"
+    ],
     "coverUrl": "https://picsum.photos/seed/jude/300",
     "language": "Anglais"
   },
@@ -170,8 +200,10 @@
     "album": "Uptown Special",
     "year": 2014,
     "duration": 269,
-    "genre": ["Funk", "Pop"],
-    "mood": ["Dansant", "Joyeux"],
+    "genre": [
+      "Funk",
+      "Pop"
+    ],
     "coverUrl": "https://picsum.photos/seed/uptown/300",
     "language": "Anglais"
   },
@@ -181,8 +213,10 @@
     "album": "21",
     "year": 2011,
     "duration": 285,
-    "genre": ["Pop", "Ballad"],
-    "mood": ["Triste", "Émotionnel"],
+    "genre": [
+      "Pop",
+      "Ballad"
+    ],
     "coverUrl": "https://picsum.photos/seed/someone/300",
     "language": "Anglais"
   },
@@ -192,8 +226,10 @@
     "album": "Single",
     "year": 1947,
     "duration": 207,
-    "genre": ["Chanson française", "Jazz"],
-    "mood": ["Romantique", "Nostalgique"],
+    "genre": [
+      "Chanson française",
+      "Jazz"
+    ],
     "coverUrl": "https://picsum.photos/seed/lavie/300",
     "language": "Français"
   },
@@ -203,8 +239,10 @@
     "album": "Single",
     "year": 2017,
     "duration": 228,
-    "genre": ["Reggaeton", "Latin Pop"],
-    "mood": ["Dansant", "Sensuel"],
+    "genre": [
+      "Reggaeton",
+      "Latin Pop"
+    ],
     "coverUrl": "https://picsum.photos/seed/despacito/300",
     "language": "Espagnol"
   },
@@ -214,8 +252,10 @@
     "album": "True",
     "year": 2013,
     "duration": 247,
-    "genre": ["EDM", "Folk House"],
-    "mood": ["Énergique", "Motivant"],
+    "genre": [
+      "EDM",
+      "Folk House"
+    ],
     "coverUrl": "https://picsum.photos/seed/wake/300",
     "language": "Anglais"
   },
@@ -225,8 +265,10 @@
     "album": "Purple Rain",
     "year": 1984,
     "duration": 518,
-    "genre": ["Rock", "R&B"],
-    "mood": ["Émotionnel", "Épique"],
+    "genre": [
+      "Rock",
+      "R&B"
+    ],
     "coverUrl": "https://picsum.photos/seed/purple/300",
     "language": "Anglais"
   },
@@ -236,8 +278,10 @@
     "album": "Thriller",
     "year": 1982,
     "duration": 357,
-    "genre": ["Pop", "Funk"],
-    "mood": ["Effrayant", "Dansant"],
+    "genre": [
+      "Pop",
+      "Funk"
+    ],
     "coverUrl": "https://picsum.photos/seed/thriller/300",
     "language": "Anglais"
   },
@@ -247,8 +291,10 @@
     "album": "Back in Black",
     "year": 1980,
     "duration": 255,
-    "genre": ["Rock", "Hard Rock"],
-    "mood": ["Énergique", "Rebelle"],
+    "genre": [
+      "Rock",
+      "Hard Rock"
+    ],
     "coverUrl": "https://picsum.photos/seed/black/300",
     "language": "Anglais"
   },
@@ -258,8 +304,10 @@
     "album": "Various Positions",
     "year": 1984,
     "duration": 271,
-    "genre": ["Folk", "Rock"],
-    "mood": ["Spirituel", "Mélancolique"],
+    "genre": [
+      "Folk",
+      "Rock"
+    ],
     "coverUrl": "https://picsum.photos/seed/hallelujah/300",
     "language": "Anglais"
   },
@@ -269,8 +317,10 @@
     "album": "The Best of Earth, Wind & Fire Vol. 1",
     "year": 1978,
     "duration": 215,
-    "genre": ["Funk", "Disco"],
-    "mood": ["Joyeux", "Dansant"],
+    "genre": [
+      "Funk",
+      "Disco"
+    ],
     "coverUrl": "https://picsum.photos/seed/september/300",
     "language": "Anglais"
   },
@@ -280,8 +330,10 @@
     "album": "Escape",
     "year": 1981,
     "duration": 251,
-    "genre": ["Rock", "Arena Rock"],
-    "mood": ["Motivant", "Nostalgique"],
+    "genre": [
+      "Rock",
+      "Arena Rock"
+    ],
     "coverUrl": "https://picsum.photos/seed/dont/300",
     "language": "Anglais"
   },
@@ -291,8 +343,10 @@
     "album": "When We All Fall Asleep, Where Do We Go?",
     "year": 2019,
     "duration": 194,
-    "genre": ["Pop", "Electropop"],
-    "mood": ["Sombre", "Cool"],
+    "genre": [
+      "Pop",
+      "Electropop"
+    ],
     "coverUrl": "https://picsum.photos/seed/bad/300",
     "language": "Anglais"
   },
@@ -302,8 +356,10 @@
     "album": "7 EP",
     "year": 2019,
     "duration": 157,
-    "genre": ["Country Rap", "Hip-Hop"],
-    "mood": ["Joyeux", "Rebelle"],
+    "genre": [
+      "Country Rap",
+      "Hip-Hop"
+    ],
     "coverUrl": "https://picsum.photos/seed/oldtown/300",
     "language": "Anglais"
   },
@@ -313,8 +369,10 @@
     "album": "1000 Forms of Fear",
     "year": 2014,
     "duration": 216,
-    "genre": ["Pop", "Electropop"],
-    "mood": ["Puissant", "Émotionnel"],
+    "genre": [
+      "Pop",
+      "Electropop"
+    ],
     "coverUrl": "https://picsum.photos/seed/chandelier/300",
     "language": "Anglais"
   },
@@ -324,8 +382,10 @@
     "album": "Sweet Dreams (Are Made of This)",
     "year": 1983,
     "duration": 216,
-    "genre": ["Synthpop", "New Wave"],
-    "mood": ["Mystérieux", "Dansant"],
+    "genre": [
+      "Synthpop",
+      "New Wave"
+    ],
     "coverUrl": "https://picsum.photos/seed/dreams/300",
     "language": "Anglais"
   },
@@ -335,8 +395,10 @@
     "album": "Hunting High and Low",
     "year": 1985,
     "duration": 225,
-    "genre": ["Synthpop", "New Wave"],
-    "mood": ["Joyeux", "Énergique"],
+    "genre": [
+      "Synthpop",
+      "New Wave"
+    ],
     "coverUrl": "https://picsum.photos/seed/takeon/300",
     "language": "Anglais"
   },
@@ -346,8 +408,10 @@
     "album": "It Might as Well Be Swing",
     "year": 1964,
     "duration": 148,
-    "genre": ["Jazz", "Swing"],
-    "mood": ["Romantique", "Relaxant"],
+    "genre": [
+      "Jazz",
+      "Swing"
+    ],
     "coverUrl": "https://picsum.photos/seed/fly/300",
     "language": "Anglais"
   },
@@ -357,8 +421,10 @@
     "album": "What's Going On",
     "year": 1971,
     "duration": 232,
-    "genre": ["Soul", "R&B"],
-    "mood": ["Contemplatif", "Mélancolique"],
+    "genre": [
+      "Soul",
+      "R&B"
+    ],
     "coverUrl": "https://picsum.photos/seed/whats/300",
     "language": "Anglais"
   },
@@ -368,8 +434,10 @@
     "album": "Talking Book",
     "year": 1972,
     "duration": 245,
-    "genre": ["Funk", "Soul"],
-    "mood": ["Dansant", "Énergique"],
+    "genre": [
+      "Funk",
+      "Soul"
+    ],
     "coverUrl": "https://picsum.photos/seed/super/300",
     "language": "Anglais"
   },
@@ -379,8 +447,10 @@
     "album": "I Never Loved a Man the Way I Love You",
     "year": 1967,
     "duration": 147,
-    "genre": ["Soul", "R&B"],
-    "mood": ["Puissant", "Motivant"],
+    "genre": [
+      "Soul",
+      "R&B"
+    ],
     "coverUrl": "https://picsum.photos/seed/respect/300",
     "language": "Anglais"
   },
@@ -390,8 +460,10 @@
     "album": "Night Visions",
     "year": 2012,
     "duration": 187,
-    "genre": ["Alternative Rock", "Electronic Rock"],
-    "mood": ["Intense", "Épique"],
+    "genre": [
+      "Alternative Rock",
+      "Electronic Rock"
+    ],
     "coverUrl": "https://picsum.photos/seed/radio/300",
     "language": "Anglais"
   },
@@ -401,8 +473,10 @@
     "album": "Native",
     "year": 2013,
     "duration": 257,
-    "genre": ["Pop Rock", "Folk Pop"],
-    "mood": ["Motivant", "Joyeux"],
+    "genre": [
+      "Pop Rock",
+      "Folk Pop"
+    ],
     "coverUrl": "https://picsum.photos/seed/counting/300",
     "language": "Anglais"
   },
@@ -412,8 +486,10 @@
     "album": "Random Access Memories",
     "year": 2013,
     "duration": 369,
-    "genre": ["Disco", "Funk"],
-    "mood": ["Dansant", "Joyeux"],
+    "genre": [
+      "Disco",
+      "Funk"
+    ],
     "coverUrl": "https://picsum.photos/seed/lucky/300",
     "language": "Anglais"
   },
@@ -423,8 +499,10 @@
     "album": "Oral Fixation, Vol. 2",
     "year": 2006,
     "duration": 218,
-    "genre": ["Latin Pop", "Reggaeton"],
-    "mood": ["Dansant", "Sensuel"],
+    "genre": [
+      "Latin Pop",
+      "Reggaeton"
+    ],
     "coverUrl": "https://picsum.photos/seed/hips/300",
     "language": "Anglais"
   },
@@ -434,8 +512,10 @@
     "album": "Viva la Vida or Death and All His Friends",
     "year": 2008,
     "duration": 242,
-    "genre": ["Alternative Rock", "Baroque Pop"],
-    "mood": ["Épique", "Contemplatif"],
+    "genre": [
+      "Alternative Rock",
+      "Baroque Pop"
+    ],
     "coverUrl": "https://picsum.photos/seed/viva/300",
     "language": "Anglais"
   },
@@ -445,8 +525,10 @@
     "album": "Views",
     "year": 2015,
     "duration": 267,
-    "genre": ["Hip-Hop", "R&B"],
-    "mood": ["Cool", "Mélancolique"],
+    "genre": [
+      "Hip-Hop",
+      "R&B"
+    ],
     "coverUrl": "https://picsum.photos/seed/hotline/300",
     "language": "Anglais"
   },
@@ -456,8 +538,10 @@
     "album": "A Star Is Born Soundtrack",
     "year": 2018,
     "duration": 215,
-    "genre": ["Pop", "Rock"],
-    "mood": ["Romantique", "Puissant"],
+    "genre": [
+      "Pop",
+      "Rock"
+    ],
     "coverUrl": "https://picsum.photos/seed/shallow/300",
     "language": "Anglais"
   },
@@ -467,8 +551,10 @@
     "album": "(What's the Story) Morning Glory?",
     "year": 1995,
     "duration": 258,
-    "genre": ["Britpop", "Alternative Rock"],
-    "mood": ["Nostalgique", "Contemplatif"],
+    "genre": [
+      "Britpop",
+      "Alternative Rock"
+    ],
     "coverUrl": "https://picsum.photos/seed/wall/300",
     "language": "Anglais"
   },
@@ -478,8 +564,10 @@
     "album": "Californication",
     "year": 1999,
     "duration": 329,
-    "genre": ["Alternative Rock", "Funk Rock"],
-    "mood": ["Mélancolique", "Relaxant"],
+    "genre": [
+      "Alternative Rock",
+      "Funk Rock"
+    ],
     "coverUrl": "https://picsum.photos/seed/cali/300",
     "language": "Anglais"
   },
@@ -489,8 +577,10 @@
     "album": "Pablo Honey",
     "year": 1992,
     "duration": 238,
-    "genre": ["Alternative Rock", "Grunge"],
-    "mood": ["Triste", "Émotionnel"],
+    "genre": [
+      "Alternative Rock",
+      "Grunge"
+    ],
     "coverUrl": "https://picsum.photos/seed/creep/300",
     "language": "Anglais"
   },
@@ -500,8 +590,10 @@
     "album": "Outlandos d'Amour",
     "year": 1978,
     "duration": 192,
-    "genre": ["Rock", "Reggae Rock"],
-    "mood": ["Énergique", "Intense"],
+    "genre": [
+      "Rock",
+      "Reggae Rock"
+    ],
     "coverUrl": "https://picsum.photos/seed/roxanne/300",
     "language": "Anglais"
   },
@@ -511,8 +603,10 @@
     "album": "Born to Die",
     "year": 2012,
     "duration": 265,
-    "genre": ["Pop", "Baroque Pop"],
-    "mood": ["Mélancolique", "Nostalgique"],
+    "genre": [
+      "Pop",
+      "Baroque Pop"
+    ],
     "coverUrl": "https://picsum.photos/seed/summer/300",
     "language": "Anglais"
   },
@@ -522,8 +616,10 @@
     "album": "Nothing but the Beat",
     "year": 2011,
     "duration": 245,
-    "genre": ["EDM", "House"],
-    "mood": ["Puissant", "Motivant"],
+    "genre": [
+      "EDM",
+      "House"
+    ],
     "coverUrl": "https://picsum.photos/seed/titanium/300",
     "language": "Anglais"
   },
@@ -533,8 +629,10 @@
     "album": "Love Tracks",
     "year": 1978,
     "duration": 198,
-    "genre": ["Disco", "Soul"],
-    "mood": ["Motivant", "Joyeux"],
+    "genre": [
+      "Disco",
+      "Soul"
+    ],
     "coverUrl": "https://picsum.photos/seed/survive/300",
     "language": "Anglais"
   },
@@ -544,8 +642,10 @@
     "album": "Arrival",
     "year": 1976,
     "duration": 230,
-    "genre": ["Pop", "Disco"],
-    "mood": ["Joyeux", "Dansant"],
+    "genre": [
+      "Pop",
+      "Disco"
+    ],
     "coverUrl": "https://picsum.photos/seed/dancing/300",
     "language": "Anglais"
   },
@@ -555,8 +655,9 @@
     "album": "Live!",
     "year": 1975,
     "duration": 229,
-    "genre": ["Reggae"],
-    "mood": ["Relaxant", "Réconfortant"],
+    "genre": [
+      "Reggae"
+    ],
     "coverUrl": "https://picsum.photos/seed/nowoman/300",
     "language": "Anglais"
   }

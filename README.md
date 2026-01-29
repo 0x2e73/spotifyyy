@@ -1,4 +1,4 @@
-# Foodly
+# Spotifyyy
 
 Application web pour créer et gérer des playlists avec recherche par tags.
 

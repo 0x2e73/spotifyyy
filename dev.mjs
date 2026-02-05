@@ -27,6 +27,11 @@ function log(label, color, data) {
 
 console.log(`${COLORS.green}Starting Spotifyy dev environment...${COLORS.reset}`);
 console.log(`${COLORS.dim}──────────────────────────────────────${COLORS.reset}`);
+console.log(`${COLORS.yellow}  Frontend ${COLORS.reset} http://localhost:3000`);
+console.log(`${COLORS.cyan}  API      ${COLORS.reset} http://localhost:8000/api/`);
+console.log(`${COLORS.dim}  MongoDB   mongodb://localhost:27017${COLORS.reset}`);
+console.log(`${COLORS.dim}──────────────────────────────────────${COLORS.reset}`);
+console.log();
 
 // 1. Start Docker (MongoDB + Django API)
 const docker = spawn("docker", ["compose", "up", "--build"], {

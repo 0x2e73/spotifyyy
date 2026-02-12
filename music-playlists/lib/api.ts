@@ -88,7 +88,7 @@ export async function createPlaylist(data: {
 // Met à jour une playlist existante
 export async function updatePlaylist(
   id: string,
-  data: { name?: string; description?: string; coverImage?: string }
+  data: { name?: string; description?: string; coverImage?: string; songs?: PlaylistSongAPI[] }
 ): Promise<PlaylistAPI> {
   const res = await fetch(`${API_BASE}/playlists/${id}/`, {
     method: "PUT",

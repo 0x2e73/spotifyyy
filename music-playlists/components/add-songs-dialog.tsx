@@ -15,9 +15,45 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { Plus, Search, Check } from "lucide-react";
+import { Plus, Search, Check, Music } from "lucide-react";
 import { fetchSongs, addSongToPlaylist, type SongAPI } from "@/lib/api";
 import { formatDuration } from "@/lib/api";
+
+const COVER_COLORS = [
+  "#e74c3c", "#e67e22", "#f1c40f", "#2ecc71", "#1abc9c",
+  "#3498db", "#9b59b6", "#e84393", "#00cec9", "#6c5ce7",
+];
+
+function hashString(str: string): number {
+  let hash = 0;
+  for (let i = 0; i < str.length; i++) {
+    hash = str.charCodeAt(i) + ((hash << 5) - hash);
+  }
+  return Math.abs(hash);
+}
+
+function SongCover({ title, coverUrl }: { title: string; coverUrl: string }) {
+  const [error, setError] = useState(false);
+  return (
+    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded bg-secondary">
+      {coverUrl && !error ? (
+        <img
+          src={coverUrl}
+          alt={title}
+          className="h-full w-full rounded object-cover"
+          onError={() => setError(true)}
+        />
+      ) : (
+        <div
+          className="flex h-full w-full items-center justify-center rounded text-xs font-bold text-white"
+          style={{ backgroundColor: COVER_COLORS[hashString(title) % COVER_COLORS.length] }}
+        >
+          {title.charAt(0).toUpperCase()}
+        </div>
+      )}
+    </div>
+  );
+}
 
 interface AddSongsDialogProps {
   playlistId: string;
@@ -123,12 +159,7 @@ export default function AddSongsDialog({
                     key={song._id}
                     className="flex items-center gap-3 rounded-md px-3 py-2 hover:bg-muted"
                   >
-                    {/* Cover miniature */}
-                    <img
-                      src={song.coverUrl}
-                      alt={song.title}
-                      className="h-10 w-10 rounded object-cover"
-                    />
+                    <SongCover title={song.title} coverUrl={song.coverUrl} />
                     {/* Infos */}
                     <div className="min-w-0 flex-1">
                       <p className="truncate text-sm font-medium">{song.title}</p>

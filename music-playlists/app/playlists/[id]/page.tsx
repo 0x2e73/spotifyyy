@@ -10,7 +10,6 @@ import { useEffect, useState, useCallback, useRef } from "react";
 import { useParams, useRouter } from "next/navigation";
 import {
   fetchPlaylist,
-  fetchSongs,
   removeSongFromPlaylist,
   deletePlaylist,
   updatePlaylist,
@@ -47,7 +46,6 @@ export default function PlaylistDetailPage() {
 
   const [playlist, setPlaylist] = useState<PlaylistAPI | null>(null);
   const [songs, setSongs] = useState<SongAPI[]>([]);
-  const [allSongs, setAllSongs] = useState<SongAPI[]>([]);
   const [loading, setLoading] = useState(true);
   const [editing, setEditing] = useState(false);
   const [editName, setEditName] = useState("");
@@ -84,20 +82,16 @@ export default function PlaylistDetailPage() {
     })
   );
 
-  // Charge la playlist et toutes les chansons pour résoudre les détails
+  // Charge la playlist — les détails des chansons sont inclus via $lookup MongoDB
   const loadData = useCallback(async () => {
     try {
-      // Récupère la playlist par ID (MongoDB find_one avec ObjectId)
+      // Récupère la playlist par ID avec $lookup (jointure songs collection)
       const pl = await fetchPlaylist(playlistId);
       setPlaylist(pl);
 
-      // Récupère tout le catalogue pour résoudre les songId en objets complets
-      const allSongsData = await fetchSongs();
-      setAllSongs(allSongsData);
-
-      // Filtre les chansons qui sont dans la playlist et trie selon l'ordre MongoDB
+      // Trie les songDetails selon l'ordre du tableau songs[] de la playlist
       const songIds = pl.songs.map((s) => s.songId);
-      const songsMap = new Map(allSongsData.map((s) => [s._id, s]));
+      const songsMap = new Map((pl.songDetails ?? []).map((s) => [s._id, s]));
       const playlistSongs = songIds
         .map((id) => songsMap.get(id))
         .filter((s): s is SongAPI => s !== undefined);

@@ -30,6 +30,8 @@ export interface PlaylistAPI {
   createdBy: string;
   createdAt: string;
   songs: PlaylistSongAPI[];
+  // Détails complets des chansons, rempli par $lookup MongoDB côté API
+  songDetails?: SongAPI[];
 }
 
 // --- Songs ---

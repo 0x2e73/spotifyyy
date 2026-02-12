@@ -24,6 +24,23 @@ def serialize_docs(docs):
     return [serialize_doc(doc) for doc in docs]
 
 
+def serialize_playlist(playlist):
+    """Convertit une playlist MongoDB en dict sérialisable.
+    Gère la conversion des ObjectId imbriqués dans le tableau songs[]."""
+    if playlist is None:
+        return None
+    playlist['_id'] = str(playlist['_id'])
+    # Convertit les songId ObjectId en strings dans le tableau songs
+    for song_entry in playlist.get('songs', []):
+        if isinstance(song_entry.get('songId'), ObjectId):
+            song_entry['songId'] = str(song_entry['songId'])
+    # Convertit les _id des songDetails issus du $lookup
+    for detail in playlist.get('songDetails', []):
+        if isinstance(detail.get('_id'), ObjectId):
+            detail['_id'] = str(detail['_id'])
+    return playlist
+
+
 # ============== SONGS ==============
 
 @api_view(['GET'])
@@ -78,7 +95,7 @@ def playlists_list(request):
     if request.method == 'GET':
         # find() sans filtre — retourne toutes les playlists
         playlists = list(collection.find())
-        return Response(serialize_docs(playlists))
+        return Response([serialize_playlist(pl) for pl in playlists])
 
     elif request.method == 'POST':
         data = request.data
@@ -105,7 +122,7 @@ def playlists_list(request):
 
 @api_view(['GET', 'PUT', 'DELETE'])
 def playlist_detail(request, playlist_id):
-    """GET    /api/playlists/<id>/ - Récupère une playlist (MongoDB find_one)
+    """GET    /api/playlists/<id>/ - Récupère une playlist avec $lookup pour joindre les chansons
     PUT    /api/playlists/<id>/ - Met à jour une playlist (MongoDB $set)
     DELETE /api/playlists/<id>/ - Supprime une playlist (MongoDB delete_one)"""
     collection = get_playlists_collection()
@@ -117,11 +134,24 @@ def playlist_detail(request, playlist_id):
         return Response({'error': 'Invalid playlist ID'}, status=status.HTTP_400_BAD_REQUEST)
 
     if request.method == 'GET':
-        # find_one() — cherche un document par son _id
-        playlist = collection.find_one({'_id': oid})
-        if not playlist:
+        # Aggregation pipeline avec $lookup pour joindre les chansons
+        # $match : filtre la playlist par _id
+        # $lookup : jointure entre playlists.songs.songId et songs._id
+        pipeline = [
+            {'$match': {'_id': oid}},
+            {'$lookup': {
+                'from': 'songs',
+                'localField': 'songs.songId',
+                'foreignField': '_id',
+                'as': 'songDetails',
+            }},
+        ]
+
+        results = list(collection.aggregate(pipeline))
+        if not results:
             return Response({'error': 'Playlist not found'}, status=status.HTTP_404_NOT_FOUND)
-        return Response(serialize_doc(playlist))
+
+        return Response(serialize_playlist(results[0]))
 
     elif request.method == 'PUT':
         data = request.data
@@ -135,7 +165,11 @@ def playlist_detail(request, playlist_id):
         if 'coverImage' in data:
             update_data['coverImage'] = data['coverImage']
         if 'songs' in data:
-            update_data['songs'] = data['songs']
+            # Reconvertit les songId strings du frontend en ObjectId pour MongoDB
+            update_data['songs'] = [
+                {'songId': ObjectId(s['songId']), 'addedAt': s.get('addedAt', '')}
+                for s in data['songs']
+            ]
 
         # find_one_and_update() avec $set — modifie les champs spécifiés
         # return_document=True retourne le document APRÈS modification
@@ -148,7 +182,7 @@ def playlist_detail(request, playlist_id):
         if not result:
             return Response({'error': 'Playlist not found'}, status=status.HTTP_404_NOT_FOUND)
 
-        return Response(serialize_doc(result))
+        return Response(serialize_playlist(result))
 
     elif request.method == 'DELETE':
         # delete_one() — supprime le document correspondant
@@ -181,7 +215,8 @@ def playlist_songs(request, playlist_id):
 
         # Vérifie que la chanson existe dans la collection songs
         try:
-            song = songs_collection.find_one({'_id': ObjectId(song_id)})
+            song_oid = ObjectId(song_id)
+            song = songs_collection.find_one({'_id': song_oid})
             if not song:
                 return Response({'error': 'Song not found'}, status=status.HTTP_404_NOT_FOUND)
         except InvalidId:
@@ -190,14 +225,14 @@ def playlist_songs(request, playlist_id):
         # $push — ajoute un élément au tableau 'songs' du document playlist
         result = collection.find_one_and_update(
             {'_id': oid},
-            {'$push': {'songs': {'songId': song_id, 'addedAt': datetime.utcnow()}}},
+            {'$push': {'songs': {'songId': song_oid, 'addedAt': datetime.utcnow()}}},
             return_document=True
         )
 
         if not result:
             return Response({'error': 'Playlist not found'}, status=status.HTTP_404_NOT_FOUND)
 
-        return Response(serialize_doc(result))
+        return Response(serialize_playlist(result))
 
     elif request.method == 'DELETE':
         song_id = request.query_params.get('songId')
@@ -206,13 +241,18 @@ def playlist_songs(request, playlist_id):
             return Response({'error': 'songId is required'}, status=status.HTTP_400_BAD_REQUEST)
 
         # $pull — retire l'élément du tableau 'songs' qui match le songId
+        try:
+            song_oid = ObjectId(song_id)
+        except InvalidId:
+            return Response({'error': 'Invalid song ID'}, status=status.HTTP_400_BAD_REQUEST)
+
         result = collection.find_one_and_update(
             {'_id': oid},
-            {'$pull': {'songs': {'songId': song_id}}},
+            {'$pull': {'songs': {'songId': song_oid}}},
             return_document=True
         )
 
         if not result:
             return Response({'error': 'Playlist not found'}, status=status.HTTP_404_NOT_FOUND)
 
-        return Response(serialize_doc(result))
+        return Response(serialize_playlist(result))

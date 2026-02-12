@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Spotifyy — Gestionnaire de Playlists",
+  title: "Spotifyy",
   description: "Application web de gestion de playlists musicales avec MongoDB",
 };
 

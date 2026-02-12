@@ -22,7 +22,7 @@ export default function Sidebar() {
       {/* Logo / Titre de l'app */}
       <div className="flex items-center gap-2 px-6 py-5">
         <ListMusic className="h-7 w-7 text-primary" />
-        <span className="text-xl font-bold text-white">Spotifyy</span>
+        <span className="text-xl font-bold text-white">Spotifyy By Salim</span>
       </div>
 
       {/* Navigation principale */}

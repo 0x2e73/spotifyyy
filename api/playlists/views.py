@@ -134,6 +134,8 @@ def playlist_detail(request, playlist_id):
             update_data['description'] = data['description']
         if 'coverImage' in data:
             update_data['coverImage'] = data['coverImage']
+        if 'songs' in data:
+            update_data['songs'] = data['songs']
 
         # find_one_and_update() avec $set — modifie les champs spécifiés
         # return_document=True retourne le document APRÈS modification

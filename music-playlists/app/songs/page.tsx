@@ -33,6 +33,8 @@ export default function SongsPage() {
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState("");
   const [selectedGenre, setSelectedGenre] = useState<string | null>(null);
+  const [yearMin, setYearMin] = useState("");
+  const [yearMax, setYearMax] = useState("");
 
   // Charge les chansons avec les filtres actifs
   useEffect(() => {
@@ -40,9 +42,11 @@ export default function SongsPage() {
       setLoading(true);
       try {
         // Construit les params pour l'API (traduits en filtres MongoDB côté backend)
-        const params: { query?: string; genre?: string } = {};
+        const params: { query?: string; genre?: string; yearMin?: number; yearMax?: number } = {};
         if (search) params.query = search;
         if (selectedGenre) params.genre = selectedGenre;
+        if (yearMin) params.yearMin = Number(yearMin);
+        if (yearMax) params.yearMax = Number(yearMax);
 
         const data = await fetchSongs(params);
         setSongs(data);
@@ -54,7 +58,7 @@ export default function SongsPage() {
     }, 300); // Debounce de 300ms
 
     return () => clearTimeout(timer);
-  }, [search, selectedGenre]);
+  }, [search, selectedGenre, yearMin, yearMax]);
 
   // Charge les playlists pour le menu "Ajouter à"
   useEffect(() => {
@@ -110,6 +114,24 @@ export default function SongsPage() {
             {genre}
           </Badge>
         ))}
+      </div>
+
+      {/* Filtres par année */}
+      <div className="mb-6 flex items-center gap-3">
+        <Input
+          type="number"
+          placeholder="Année min"
+          value={yearMin}
+          onChange={(e) => setYearMin(e.target.value)}
+          className="w-32"
+        />
+        <Input
+          type="number"
+          placeholder="Année max"
+          value={yearMax}
+          onChange={(e) => setYearMax(e.target.value)}
+          className="w-32"
+        />
       </div>
 
       <Separator className="mb-4" />
